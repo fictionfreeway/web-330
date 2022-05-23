@@ -1,4 +1,4 @@
-# WEB 330 Enterprise JavaScript 1
+# WEB 330 Enterprise JavaScript II
 
 ## Contributors
 * Robert Kumar
