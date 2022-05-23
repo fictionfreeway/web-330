@@ -1,2 +1,5 @@
-# web-330
-Repository to contain assignments for WEB330 Enterprise JavaScript II
+# WEB 330 Enterprise JavaScript 1
+
+## Contributors
+* Robert Kumar
+* William Watlington
