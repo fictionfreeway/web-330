@@ -1,0 +1,70 @@
+/*  Title: site.css
+    Author: William Watlington
+    Date: 5/29/2022
+    Description: css for html pages found in WEB-330 root */
+
+.app-header {
+    text-align: center;
+    font-weight: 400;
+    border: none;
+    color: inherit;
+    background-color: inherit;
+}
+
+.return-home {
+    color: #4F3674;
+    text-decoration: none;
+}
+
+.return-home:visited {
+    color: #3c275a;
+}
+
+.return-home:hover {
+    color: #4F3674;
+    background-color: #D6A800;
+}
+
+.form {
+    display: inline-grid;
+    grid-template-columns: auto;
+}
+
+.form-field {
+    padding: 20px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.assign-container {
+    padding: 10px;
+}
+
+.assign-results-text {
+    text-align: center;
+    font-size: 28px;
+}
+
+.assign-content {
+    width: 600px;
+    margin: 3% auto 0;
+}
+
+#container {
+    margin: 50px 100px 0 100px;
+}
+
+#icon-mode:hover {
+    cursor: pointer;
+}
+
+#icon-text {
+    padding-left: 10px;
+}
+
+.pull-right {
+    float: right;
+}
+
