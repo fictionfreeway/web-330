@@ -27,6 +27,7 @@ h1 {
     background-color: var(--h1-background-color);
     padding: 10px;
     border: solid 1px var(--h1-border-color);
+    text-align: center;
 }
 
 h2,h3,h4 {
@@ -36,6 +37,15 @@ h2,h3,h4 {
     border: solid 1px var(--heading-border-color);
 }
 
+.app-card-header, .app-header {
+    text-align: center;
+    color: #3c275a;
+}
+
+.app-header{
+    font-size: 1;
+}
+
 .card {
     display: block;
     width: 80%;
@@ -43,11 +53,11 @@ h2,h3,h4 {
     padding: 20px 5%;
     box-shadow: 2px 2px 10px rgb(119, 119, 119);
     background-color: var(--card-background-color);
- }
+}
 
  .card-title {
      color: var(--card-title-color);
- }
+}
 
 .btn-primary {
     display: block;
@@ -58,13 +68,14 @@ h2,h3,h4 {
     border-radius: 5px;
     border: none;
     margin-top: 30px;
- }
+}
+
 
  .btn-primary:hover {
     cursor: pointer;
     background-color: var(--btn-hover-background-color);
     color: var(--btn-hover-color);
- }
+}
 
 .drop-down-menu {
     vertical-align: middle;
@@ -83,7 +94,11 @@ input {
     padding: 10px 0 10px 20px;
     border-radius: 5px;
     border: 1px solid var(--input-border-color);
-   }
+}
+
+.return-home {
+    margin-left: 5%;
+}
 
 
 body.light-theme {
