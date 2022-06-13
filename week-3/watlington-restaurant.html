@@ -15,6 +15,7 @@ Description: HTML for restaurant app
         <script type="module">
             import {Bill, Beverage, Appetizer, MainCourse, Dessert } from "./index.js";
         </script>
+        <script type="module" src="./place-order.js"></script>
     </head>
     <body>
         <h1 class="app-header">Welcome to the Restaurant App!</h1>
@@ -24,65 +25,65 @@ Description: HTML for restaurant app
             <div class="card" id="beverages">
                 <h2 class="app-card-header">Beverages</h2>
                 <form>
-                    <label for="tea"><span class="name">Tea</span> <span class="price">($2.75)</span></label>
                     <input id="tea" type="checkbox">
-
-                    <label for="coffee"><span class="name">Coffee</span> <span class="price">($2.00)</span></label>
+                    <label for="tea"><span class="name">Tea</span> <span class="price">($2.75)</span></label>
+                    
                     <input id="coffee" type="checkbox">
+                    <label for="coffee"><span class="name">Coffee</span> <span class="price">($2.00)</span></label>
 
-                    <label for="soda"><span class="name">Soda</span> <span class="price">($3.75)</span></label>
                     <input id="soda" type="checkbox">
+                    <label for="soda"><span class="name">Soda</span> <span class="price">($3.75)</span></label>
 
-                    <label for="milk"><span class="name">Milk</span> <span class="price">($1.50)</span></label>
                     <input id="milk" type="checkbox">
+                    <label for="milk"><span class="name">Milk</span> <span class="price">($1.50)</span></label>
                 </form>
             </div>
             <div class="card" id="appetizers">
                 <h2 class="app-card-header">Appetizers</h2>
                 <form>
-                    <label for="wings"><span class="name">Wings</span> <span class="price">($8.00)</span></label>
                     <input id="wings" type="checkbox">
-
-                    <label for="onion-rings"><span class="name">Onion Rings</span> <span class="price">($5.75)</span></label>
+                    <label for="wings"><span class="name">Wings</span> <span class="price">($8.00)</span></label>
+                    
                     <input id="onion-rings" type="checkbox">
-
-                    <label for="chips"><span class="name">Chips</span> <span class="price">($2.50)</span></label>
+                    <label for="onion-rings"><span class="name">Onion Rings</span> <span class="price">($5.75)</span></label>
+                    
                     <input id="chips" type="checkbox">
+                    <label for="chips"><span class="name">Chips</span> <span class="price">($2.50)</span></label>
 
-                    <label for="wontons"><span class="name">Wontons</span> <span class="price">($7.00)</span></label>
                     <input id="wontons" type="checkbox">
+                    <label for="wontons"><span class="name">Wontons</span> <span class="price">($7.00)</span></label>
                 </form>
             </div>
             <div class="card" id="main-courses">
                 <h2 class="app-card-header">Main Courses</h2>
                 <form>
-                    <label for="steak"><span class="name">Steak</span> <span class="price">($26.00)</span></label>
                     <input id="steak" type="checkbox">
+                    <label for="steak"><span class="name">Steak</span> <span class="price">($26.00)</span></label>
 
-                    <label for="hamburger"><span class="name">Hamburger</span> <span class="price">($12.50)</span></label>
                     <input id="hamburger" type="checkbox">
+                    <label for="hamburger"><span class="name">Hamburger</span> <span class="price">($12.50)</span></label>
 
-                    <label for="salad"><span class="name">Salad</span> <span class="price">($7.75)</span></label>
                     <input id="salad" type="checkbox">
+                    <label for="salad"><span class="name">Salad</span> <span class="price">($7.75)</span></label>
 
-                    <label for="ribs"><span class="name">Ribs</span> <span class="price">($18.00)</span></label>
                     <input id="ribs" type="checkbox">
+                    <label for="ribs"><span class="name">Ribs</span> <span class="price">($18.00)</span></label>
                 </form>
             </div>
             <div class="card" id="desserts">
                 <h2 class="app-card-header">Desserts</h2>
                 <form>
-                    <label for="brownie"><span class="name">Brownie</span> <span class="price">($4.50)</span></label>
                     <input id="brownie" type="checkbox">
+                    <label for="brownie"><span class="name">Brownie</span> <span class="price">($4.50)</span></label>
 
-                    <label for="cake"><span class="name">Cake</span> <span class="price">($5.00)</span></label>
                     <input id="cake" type="checkbox">
+                    <label for="cake"><span class="name">Cake</span> <span class="price">($5.00)</span></label>
 
-                    <label for="tiramisu"><span class="name">Tiramisu</span> <span class="price">($8.75)</span></label>
                     <input id="tiramisu" type="checkbox">
+                    <label for="tiramisu"><span class="name">Tiramisu</span> <span class="price">($8.75)</span></label>
 
-                    <label for="pie"><span class="name">Pie</span> <span class="price">($5.75)</span></label>
                     <input id="pie" type="checkbox">
+                    <label for="pie"><span class="name">Pie</span> <span class="price">($5.75)</span></label>
                 </form>
                 <button class="primary-button" style="width: 100%" type="button" id="btnOrder" onclick="placeOrder()">Place Order</button>
             </div>
