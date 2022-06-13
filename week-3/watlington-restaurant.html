@@ -39,8 +39,7 @@ Description: HTML for restaurant app
                 }
                 for(let item of appetizers) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
-                    let priceBefore = item.getElementsByClassName("price")[0].innerHTML;
-                    let price = parseFloat(priceBefore.replace(/\D/g, ""));
+                    let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML.replace(/\D/g, ""));
                     console.log(priceBefore);
                     console.log(price);
                     if(item.getElementsByTagName("input")[0].checked) {
@@ -49,14 +48,14 @@ Description: HTML for restaurant app
                 }
                 for(let item of mainCourses) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
-                    let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML);
+                    let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML.replace(/\D/g, ""));
                     if(item.getElementsByTagName("input")[0].checked) {
                         bill.addMainCourse(new MainCourse(name, price));
                     }
                 }
                 for(let item of desserts) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
-                    let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML);
+                    let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML.replace(/\D/g, ""));
                     if(item.getElementsByTagName("input")[0].checked) {
                         bill.addDessert(new Dessert(name, price));
                     }
