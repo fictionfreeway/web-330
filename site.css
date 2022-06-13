@@ -11,6 +11,20 @@
     background-color: inherit;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
+.primary-button {
+    display: block;
+    width: 30%;
+    height: 40px;
+    background-color: #3c275a;
+    color: #fff;
+    border: none;
+    margin-top: 30px;
+ }
+
 .return-home {
     color: #4F3674;
     text-decoration: none;
