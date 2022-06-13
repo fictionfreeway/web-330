@@ -5,7 +5,7 @@ Date: 6/12/2022
 Description: Dessert class for restaurant app 
 */
 
-import { Product } from "./product";
+import { Product } from "./product.js";
 
 export class Dessert extends Product {
     constructor(name, price) {

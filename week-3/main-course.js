@@ -5,7 +5,7 @@ Date: 6/12/2022
 Description: Main Course class for restaurant app 
 */
 
-import { Product } from "./product";
+import { Product } from "./product.js";
 
 export class MainCourse extends Product {
     constructor(name, price) {

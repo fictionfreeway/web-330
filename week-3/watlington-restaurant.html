@@ -21,7 +21,7 @@ Description: HTML for restaurant app
 
         <div class="card">
             <h2 class="app-card-header">Restaurant Menu</h2>
-            <div class="card">
+            <div class="card" id="beverages">
                 <h2 class="app-card-header">Beverages</h2>
                 <form>
                     <label></label>
@@ -37,7 +37,7 @@ Description: HTML for restaurant app
                     <input id="" type="checkbox">
                 </form>
             </div>
-            <div class="card">
+            <div class="card" id="appetizers">
                 <h2 class="app-card-header">Appetizers</h2>
                 <form>
                     <label></label>
@@ -53,7 +53,7 @@ Description: HTML for restaurant app
                     <input id="" type="checkbox">
                 </form>
             </div>
-            <div class="card">
+            <div class="card" id="main-courses">
                 <h2 class="app-card-header">Main Courses</h2>
                 <form>
                     <label></label>
@@ -69,7 +69,7 @@ Description: HTML for restaurant app
                     <input id="" type="checkbox">
                 </form>
             </div>
-            <div class="card">
+            <div class="card" id="desserts">
                 <h2 class="app-card-header">Desserts</h2>
                 <form>
                     <label></label>
@@ -84,7 +84,7 @@ Description: HTML for restaurant app
                     <label></label>
                     <input id="" type="checkbox">
                 </form>
-                <button class="primary-button" style="width: 100%" type="button" id="btnOrder">Place Order</button>
+                <button class="primary-button" style="width: 100%" type="button" id="btnOrder" onclick="placeOrder()">Place Order</button>
             </div>
         </div>
         <a class="return-home" href="../index.html">Return Home</a>

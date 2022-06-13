@@ -5,7 +5,7 @@ Date: 6/12/2022
 Description: Beverage class for restaurant app 
 */
 
-import { Product } from "./product";
+import { Product } from "./product.js";
 
 export class Beverage extends Product {
     constructor(name, price) {
