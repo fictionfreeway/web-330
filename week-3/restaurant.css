@@ -7,5 +7,6 @@ Description: CSS for restaurant app */
 label {
     display: block;
     margin: 0 auto;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
 }
