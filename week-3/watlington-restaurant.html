@@ -39,7 +39,7 @@ Description: HTML for restaurant app
                 }
                 for(let item of appetizers) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
-                    let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML);
+                    let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML).replace(/\D/g, "");
                     if(item.getElementsByTagName("input")[0].checked) {
                         bill.addAppetizer(new Appetizer(name, price));
                     }
