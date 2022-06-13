@@ -7,7 +7,7 @@ Description: Product class for restaurant app
 
 export class Product {
     constructor(name, price) {
-        this.name = home;
+        this.name = name;
         this.price = price;
     }
 }
