@@ -15,16 +15,16 @@ Description: HTML for restaurant app
         <script type="module">
             import {Bill, Beverage, Appetizer, MainCourse, Dessert } from "./index.js";
             const beveragesDiv = document.getElementById("beverages");
-            const beverages = beveragesDiv.getElementsByTagName("input");
+            const beverages = beveragesDiv.getElementsByTagName("label");
 
             const appetizersDiv = document.getElementById("appetizers");
-            const appetizers = beveragesDiv.getElementsByTagName("input");
+            const appetizers = beveragesDiv.getElementsByTagName("label");
 
             const mainCoursesDiv = document.getElementById("main-courses");
-            const mainCourses = beveragesDiv.getElementsByTagName("input");
+            const mainCourses = beveragesDiv.getElementsByTagName("label");
 
             const dessertsDiv = document.getElementById("desserts");
-            const desserts = beveragesDiv.getElementsByTagName("input");
+            const desserts = beveragesDiv.getElementsByTagName("label");
 
             const orderResults = document.getElementById("order-total")
 
@@ -33,28 +33,28 @@ Description: HTML for restaurant app
                 for(let item of beverages) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
                     let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML);
-                    if(item.checked) {
+                    if(item.getElementsByTagName("input")[0].checked) {
                         bill.addBeverage(new Beverage(name, price));
                     }
                 }
                 for(let item of appetizers) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
                     let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML);
-                    if(item.checked) {
+                    if(item.getElementsByTagName("input")[0].checked) {
                         bill.addAppetizer(new Appetizer(name, price));
                     }
                 }
                 for(let item of mainCourses) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
                     let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML);
-                    if(item.checked) {
+                    if(item.getElementsByTagName("input")[0].checked) {
                         bill.addMainCourse(new MainCourse(name, price));
                     }
                 }
                 for(let item of desserts) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
                     let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML);
-                    if(item.checked) {
+                    if(item.getElementsByTagName("input")[0].checked) {
                         bill.addDessert(new Dessert(name, price));
                     }
                 }
@@ -72,59 +72,58 @@ Description: HTML for restaurant app
             <h2 class="app-card-header">Restaurant Menu</h2>
             <div class="card" id="beverages">
                 <h2 class="app-card-header">Beverages</h2>
-                    <input id="tea" type="checkbox">
-                    <label for="tea"><span class="name">Tea</span> <span class="price">($2.75)</span></label>
+                    <label><input id="tea" type="checkbox"><span class="name">Tea</span> <span class="price">($2.75)</span></label>
                     
-                    <input id="coffee" type="checkbox">
-                    <label for="coffee"><span class="name">Coffee</span> <span class="price">($2.00)</span></label>
+                    <label><input id="coffee" type="checkbox">
+                    <span class="name">Coffee</span> <span class="price">($2.00)</span></label>
 
-                    <input id="soda" type="checkbox">
-                    <label for="soda"><span class="name">Soda</span> <span class="price">($3.75)</span></label>
+                    <label><input id="soda" type="checkbox">
+                    <span class="name">Soda</span> <span class="price">($3.75)</span></label>
 
                     <input id="milk" type="checkbox">
                     <label for="milk"><span class="name">Milk</span> <span class="price">($1.50)</span></label>
             </div>
             <div class="card" id="appetizers">
                 <h2 class="app-card-header">Appetizers</h2>
-                    <input id="wings" type="checkbox">
-                    <label for="wings"><span class="name">Wings</span> <span class="price">($8.00)</span></label>
+                    <label><input id="wings" type="checkbox">
+                    <span class="name">Wings</span> <span class="price">($8.00)</span></label>
                     
-                    <input id="onion-rings" type="checkbox">
-                    <label for="onion-rings"><span class="name">Onion Rings</span> <span class="price">($5.75)</span></label>
+                    <label><input id="onion-rings" type="checkbox">
+                    <span class="name">Onion Rings</span> <span class="price">($5.75)</span></label>
                     
-                    <input id="chips" type="checkbox">
-                    <label for="chips"><span class="name">Chips</span> <span class="price">($2.50)</span></label>
+                    <label><input id="chips" type="checkbox">
+                    <span class="name">Chips</span> <span class="price">($2.50)</span></label>
 
-                    <input id="wontons" type="checkbox">
-                    <label for="wontons"><span class="name">Wontons</span> <span class="price">($7.00)</span></label>
+                    <label><input id="wontons" type="checkbox">
+                    <span class="name">Wontons</span> <span class="price">($7.00)</span></label>
             </div>
             <div class="card" id="main-courses">
                 <h2 class="app-card-header">Main Courses</h2>
-                    <input id="steak" type="checkbox">
-                    <label for="steak"><span class="name">Steak</span> <span class="price">($26.00)</span></label>
+                    <label><input id="steak" type="checkbox">
+                    <span class="name">Steak</span> <span class="price">($26.00)</span></label>
 
-                    <input id="hamburger" type="checkbox">
-                    <label for="hamburger"><span class="name">Hamburger</span> <span class="price">($12.50)</span></label>
+                    <label><input id="hamburger" type="checkbox">
+                    <span class="name">Hamburger</span> <span class="price">($12.50)</span></label>
 
-                    <input id="salad" type="checkbox">
-                    <label for="salad"><span class="name">Salad</span> <span class="price">($7.75)</span></label>
+                    <label><input id="salad" type="checkbox">
+                    <span class="name">Salad</span> <span class="price">($7.75)</span></label>
 
-                    <input id="ribs" type="checkbox">
-                    <label for="ribs"><span class="name">Ribs</span> <span class="price">($18.00)</span></label>
+                    <label><input id="ribs" type="checkbox">
+                    <span class="name">Ribs</span> <span class="price">($18.00)</span></label>
             </div>
             <div class="card" id="desserts">
                 <h2 class="app-card-header">Desserts</h2>
-                    <input id="brownie" type="checkbox">
-                    <label for="brownie"><span class="name">Brownie</span> <span class="price">($4.50)</span></label>
+                    <label><input id="brownie" type="checkbox">
+                    <span class="name">Brownie</span> <span class="price">($4.50)</span></label>
 
-                    <input id="cake" type="checkbox">
-                    <label for="cake"><span class="name">Cake</span> <span class="price">($5.00)</span></label>
+                    <label><input id="cake" type="checkbox">
+                    <span class="name">Cake</span> <span class="price">($5.00)</span></label>
 
-                    <input id="tiramisu" type="checkbox">
-                    <label for="tiramisu"><span class="name">Tiramisu</span> <span class="price">($8.75)</span></label>
+                    <label><input id="tiramisu" type="checkbox">
+                    <span class="name">Tiramisu</span> <span class="price">($8.75)</span></label>
 
-                    <input id="pie" type="checkbox">
-                    <label for="pie"><span class="name">Pie</span> <span class="price">($5.75)</span></label>
+                    <label><input id="pie" type="checkbox">
+                    <span class="name">Pie</span> <span class="price">($5.75)</span></label>
                 <button class="primary-button" style="width: 100%" type="button" id="btnOrder" onclick="placeOrder()">Place Order</button>
             </div>
         </div>
