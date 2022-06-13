@@ -33,6 +33,7 @@ Description: HTML for restaurant app
                 for(let item of beverages) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
                     let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML);
+                    console.log(item.getElementsByTagName("input"));
                     if(item.getElementsByTagName("input")[0].checked) {
                         bill.addBeverage(new Beverage(name, price));
                     }
