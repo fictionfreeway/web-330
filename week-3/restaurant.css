@@ -3,3 +3,8 @@ Title: watlington-palindrome.html
 Author: William Watlington
 Date: 6/12/2022
 Description: CSS for restaurant app */
+
+label {
+    display: block;
+    margin: 0 auto;
+}
