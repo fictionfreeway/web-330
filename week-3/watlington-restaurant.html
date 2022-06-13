@@ -40,7 +40,6 @@ Description: HTML for restaurant app
                 for(let item of appetizers) {
                     let name = item.getElementsByClassName("name")[0].innerHTML;
                     let price = parseFloat(item.getElementsByClassName("price")[0].innerHTML.replace(/\D/g, ""));
-                    console.log(price);
                     if(item.getElementsByTagName("input")[0].checked) {
                         bill.addAppetizer(new Appetizer(name, price));
                     }
@@ -60,10 +59,8 @@ Description: HTML for restaurant app
                     }
                 }
                 
-                orderResults.innerHTML = bill.getTotal();
+                orderResults.innerHTML = `Your order total is ${bill.getTotal()}`;
             }
-
-            window.placeOrder = placeOrder;
         </script>
     </head>
     <body>
@@ -133,7 +130,7 @@ Description: HTML for restaurant app
         <div class="card">
             <h2 class="app-card-header">Order Summary</h2>
             <div>
-                <span class="assign-results" id="order-total"></span>
+                <span class="assign-results" class="assign-results-text" id="order-total"></span>
             </div>
         </div>
     </body>
