@@ -41,6 +41,8 @@ Description: HTML for restaurant app
                     let name = item.getElementsByClassName("name")[0].innerHTML;
                     let priceBefore = item.getElementsByClassName("price")[0].innerHTML;
                     let price = parseFloat(priceBefore.replace(/\D/g, ""));
+                    console.log(priceBefore);
+                    console.log(price);
                     if(item.getElementsByTagName("input")[0].checked) {
                         bill.addAppetizer(new Appetizer(name, price));
                     }
