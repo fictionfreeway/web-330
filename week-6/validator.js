@@ -36,9 +36,7 @@ export class Validator {
 
     validate() {
         for(const item of this.validators) {
-            if(item.validate == true) {
-                return true;
-            } else {
+            if(item.validate === false) {
                 this.messages.push(item.getMessage());
             }
         }
