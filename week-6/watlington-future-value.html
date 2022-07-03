@@ -19,51 +19,51 @@
             const today = document.getElementById('today');
             today.innerHTML = new Date().toLocaleDateString('en-US');
 
-            const monthlyPayment = document.getElementById("txtMonthlyPayment").value;
-            const rate = document.getElementById("txtYearlyRate").value;
-            const years = document.getElementById("listNumOfYears").value;
-            const errorLogEl = document.getElementById("errorLog");
-
-            monthlyPaymentValidator = new Validator('Monthly Payment', monthlyPayment);
-            monthlyPaymentValidator.addRequiredField();
-            monthlyPaymentValidator.addRequiredFloatField();
-            monthlyPaymentValidator.addFloatMinField(100);
-
-            rateValidator = new Validator('Interest Rate', rate);
-            rateValidator.addRequiredField();
-            rateValidator.addRequiredFloatField();
-            rateValidator.addFloatMaxField(100);
-
-            let errorLog = [];
-
-            if(!monthlyPaymentValidator.validate()) {
-                for(message of monthlyPaymentValidator.messages){
-                    errorLog.push(message);
-                }
-            }
-
-            if(!rateValidator.validate()) {
-                for(message of rateValidator.messages) {
-                    errorLog.push(message);
-                }
-            }
-
-            if(monthlyPaymentValidator.validate() === true && rateValidator.validate() === true) {
-                errorLogEl.innerHTML = "";
-                calculator = new FinanceCalculator;
-                futureValue = calculator.calculateFutureValue(monthlyPayment, rate, years);
-                document.getElementById("futureValue").innerHTML = futureValue;
-            } else {
-                errorLogEl.innerHTML = "";
-                for(message of errorLog) {
-                    listItem = document.createElement("li");
-                    listText = document.createTextNode(message);
-                    errorLogEl.appendChild(listText);
-                }
-            }
+            
 
             function calculate() {
+                const monthlyPayment = document.getElementById("txtMonthlyPayment").value;
+                const rate = document.getElementById("txtYearlyRate").value;
+                const years = document.getElementById("listNumOfYears").value;
+                const errorLogEl = document.getElementById("errorLog");
 
+                let monthlyPaymentValidator = new Validator('Monthly Payment', monthlyPayment);
+                monthlyPaymentValidator.addRequiredField();
+                monthlyPaymentValidator.addRequiredFloatField();
+                monthlyPaymentValidator.addFloatMinField(100);
+
+                let rateValidator = new Validator('Interest Rate', rate);
+                rateValidator.addRequiredField();
+                rateValidator.addRequiredFloatField();
+                rateValidator.addFloatMaxField(100);
+
+                let errorLog = [];
+
+                if(!monthlyPaymentValidator.validate()) {
+                    for(message of monthlyPaymentValidator.messages){
+                        errorLog.push(message);
+                    }
+                }
+
+                if(!rateValidator.validate()) {
+                    for(message of rateValidator.messages) {
+                        errorLog.push(message);
+                    }
+                }
+
+                if(monthlyPaymentValidator.validate() === true && rateValidator.validate() === true) {
+                    errorLogEl.innerHTML = "";
+                    calculator = new FinanceCalculator;
+                    futureValue = calculator.calculateFutureValue(monthlyPayment, rate, years);
+                    document.getElementById("futureValue").innerHTML = futureValue;
+                } else {
+                    errorLogEl.innerHTML = "";
+                    for(message of errorLog) {
+                        listItem = document.createElement("li");
+                        listText = document.createTextNode(message);
+                        errorLogEl.appendChild(listText);
+                    }
+                }
             }
         </script>
     </head>
