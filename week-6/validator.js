@@ -39,7 +39,8 @@ export class Validator {
             if(item.validate === false) {
                 this.messages.push(item.getMessage());
             }
-        }
+        } 
+        return true;
     }
     
 }
