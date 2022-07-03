@@ -51,14 +51,14 @@
 
                 if(monthlyPaymentValidator.validate() === true && rateValidator.validate() === true) {
                     errorLogEl.innerHTML = "";
-                    calculator = new FinanceCalculator;
-                    futureValue = calculator.calculateFutureValue(monthlyPayment, rate, years);
+                    let calculator = new FinanceCalculator;
+                    let futureValue = calculator.calculateFutureValue(monthlyPayment, rate, years);
                     document.getElementById("futureValue").innerHTML = futureValue;
                 } else {
                     errorLogEl.innerHTML = "";
                     for(const message of errorLog) {
-                        listItem = document.createElement("li");
-                        listText = document.createTextNode(message);
+                        let listItem = document.createElement("li");
+                        let listText = document.createTextNode(message);
                         errorLogEl.appendChild(listText);
                     }
                 }
