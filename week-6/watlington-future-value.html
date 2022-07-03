@@ -14,8 +14,8 @@
         <link rel="stylesheet" href="./watlington-future-value.css">
 
         <script type="module">
-            import {FinanceCalculator} from './finance-calculator.js';
-            import {Validator} from './validator.js';
+            import { FinanceCalculator } from './finance-calculator.js';
+            import { Validator } from './validator.js';
             import { RequiredField } from "./required-field.js";
             import { FloatField } from "./float-field.js";
             import { FloatMinField } from "./float-min-field.js";
@@ -24,9 +24,9 @@
             today.innerHTML = new Date().toLocaleDateString('en-US');
 
             function calculate() {
-                const monthlyPayment = parseFloat(document.getElementById("txtMonthlyPayment").value);
-                const rate = parseFloat(document.getElementById("txtYearlyRate").value);
-                const years = parseFloat(document.getElementById("listNumOfYears").value);
+                const monthlyPayment = document.getElementById("txtMonthlyPayment").value;
+                const rate = document.getElementById("txtYearlyRate").value;
+                const years = document.getElementById("listNumOfYears").value;
                 const errorLogEl = document.getElementById("errorLog");
 
                 let monthlyPaymentValidator = new Validator('Monthly Payment', monthlyPayment);
@@ -47,7 +47,7 @@
                     }
                 }
 
-                if(!rateValidator.validate() === false) {
+                if(!rateValidator.validate()) {
                     for(const message of rateValidator.messages) {
                         errorLog.push(message);
                     }
