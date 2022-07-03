@@ -51,7 +51,7 @@
 
                 if(true/* monthlyPaymentValidator.validate() === true && rateValidator.validate() === true */) {
                     errorLogEl.innerHTML = "";
-                    let calculator = new FinanceCalculator;
+                    let calculator = new FinanceCalculator();
                     let futureValue = calculator.calculateFutureValue(monthlyPayment, rate, years);
                     document.getElementById("futureValue").innerHTML = futureValue;
                 } else {
