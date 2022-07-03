@@ -20,9 +20,9 @@
             today.innerHTML = new Date().toLocaleDateString('en-US');
 
             function calculate() {
-                const monthlyPayment = document.getElementById("txtMonthlyPayment").value;
-                const rate = document.getElementById("txtYearlyRate").value;
-                const years = document.getElementById("listNumOfYears").value;
+                const monthlyPayment = parseFloat(document.getElementById("txtMonthlyPayment").value);
+                const rate = parseFloat(document.getElementById("txtYearlyRate").value);
+                const years = parseFloat(document.getElementById("listNumOfYears").value);
                 const errorLogEl = document.getElementById("errorLog");
 
                 let monthlyPaymentValidator = new Validator('Monthly Payment', monthlyPayment);
