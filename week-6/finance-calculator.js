@@ -8,7 +8,7 @@
 export class FinanceCalculator {
     static MONTHS_IN_YEAR = 12;
 
-    static calculateFutureValue(monthlyPayment, rate, years) {
+    calculateFutureValue(monthlyPayment, rate, years) {
         months = years * this.MONTHS_IN_YEAR;
         interestRate = 1 + rate / 100;
         presentValue = monthlyPayment * months;
@@ -16,7 +16,7 @@ export class FinanceCalculator {
         return futureValue.toFixed(2);
     }
     
-    static convertToCurrency(field) {
+    convertToCurrency(field) {
         currencyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'});
         return currencyFormatter.format(field);
     }
