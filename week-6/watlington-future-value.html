@@ -37,19 +37,19 @@
 
                 let errorLog = [];
 
-                if(!monthlyPaymentValidator.validate()) {
+                if(monthlyPaymentValidator.validate() === false) {
                     for(const message of monthlyPaymentValidator.messages){
                         errorLog.push(message);
                     }
                 }
 
-                if(!rateValidator.validate()) {
+                if(rateValidator.validate() === false) {
                     for(const message of rateValidator.messages) {
                         errorLog.push(message);
                     }
                 }
 
-                if(monthlyPaymentValidator.validate() === false && rateValidator.validate() === false) {
+                if(monthlyPaymentValidator.validate() === true && rateValidator.validate() === true) {
                     errorLogEl.innerHTML = "";
                     let calculator = new FinanceCalculator;
                     let futureValue = calculator.calculateFutureValue(monthlyPayment, rate, years);
