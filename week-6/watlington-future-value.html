@@ -18,6 +18,53 @@
             import {Validator} from './validator.js';
             const today = document.getElementById('today');
             today.innerHTML = new Date().toLocaleDateString('en-US');
+
+            const monthlyPayment = document.getElementById("txtMonthlyPayment").value;
+            const rate = document.getElementById("txtYearlyRate").value;
+            const years = document.getElementById("listNumOfYears").value;
+            const errorLogEl = document.getElementById("errorLog");
+
+            monthlyPaymentValidator = new Validator('Monthly Payment', monthlyPayment);
+            monthlyPaymentValidator.addRequiredField();
+            monthlyPaymentValidator.addRequiredFloatField();
+            monthlyPaymentValidator.addFloatMinField(100);
+
+            rateValidator = new Validator('Interest Rate', rate);
+            rateValidator.addRequiredField();
+            rateValidator.addRequiredFloatField();
+            rateValidator.addFloatMaxField(100);
+
+            let errorLog = [];
+
+            if(!monthlyPaymentValidator.validate()) {
+                for(message of monthlyPaymentValidator.messages){
+                    errorLog.push(message);
+                }
+            }
+
+            if(!rateValidator.validate()) {
+                for(message of rateValidator.messages) {
+                    errorLog.push(message);
+                }
+            }
+
+            if(monthlyPaymentValidator.validate() === true && rateValidator.validate() === true) {
+                errorLogEl.innerHTML = "";
+                calculator = new FinanceCalculator;
+                futureValue = calculator.calculateFutureValue(monthlyPayment, rate, years);
+                document.getElementById("futureValue").innerHTML = futureValue;
+            } else {
+                errorLogEl.innerHTML = "";
+                for(message of errorLog) {
+                    listItem = document.createElement("li");
+                    listText = document.createTextNode(message);
+                    errorLogEl.appendChild(listText);
+                }
+            }
+
+            function calculate() {
+
+            }
         </script>
     </head>
     <body>
@@ -26,7 +73,7 @@
             <h2 class="app-card-header">Future Value Calculator</h2>
             <form>
             <div class="row">
-                <div class="col-12" id="errorLog"></div>
+                <ul class="col-12" id="errorLog"></ul>
             </div>
             <div class="row">
                 <label class="col-5">Monthly Payment:</label>
@@ -55,7 +102,7 @@
                 </select>
             </div>
             
-            <button type="button" class="primary-button" id="btnCalculate">Calculate</button>
+            <button type="button" class="primary-button" id="btnCalculate" onclick="calculate()">Calculate</button>
             </form>
         </div>
         <a class="return-home" href="../index.html">Return Home</a>
