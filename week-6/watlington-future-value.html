@@ -38,13 +38,13 @@
                 let errorLog = [];
 
                 if(!monthlyPaymentValidator.validate()) {
-                    for(message of monthlyPaymentValidator.messages){
+                    for(const message of monthlyPaymentValidator.messages){
                         errorLog.push(message);
                     }
                 }
 
                 if(!rateValidator.validate()) {
-                    for(message of rateValidator.messages) {
+                    for(const message of rateValidator.messages) {
                         errorLog.push(message);
                     }
                 }
