@@ -49,7 +49,7 @@
                     }
                 }
 
-                if(monthlyPaymentValidator.validate() === true && rateValidator.validate() === true) {
+                if(monthlyPaymentValidator.validate() === false && rateValidator.validate() === false) {
                     errorLogEl.innerHTML = "";
                     let calculator = new FinanceCalculator;
                     let futureValue = calculator.calculateFutureValue(monthlyPayment, rate, years);
