@@ -56,7 +56,7 @@
                     document.getElementById("futureValue").innerHTML = futureValue;
                 } else {
                     errorLogEl.innerHTML = "";
-                    for(message of errorLog) {
+                    for(const message of errorLog) {
                         listItem = document.createElement("li");
                         listText = document.createTextNode(message);
                         errorLogEl.appendChild(listText);
