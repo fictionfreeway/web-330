@@ -10,14 +10,14 @@ export class FinanceCalculator {
 
     calculateFutureValue(monthlyPayment, rate, years) {
         let months = years * this.MONTHS_IN_YEAR;
-        interestRate = 1 + rate / 100;
-        presentValue = monthlyPayment * months;
-        futureValue = presentValue * (Math.pow(interestRate, months));
+        let interestRate = 1 + rate / 100;
+        let presentValue = monthlyPayment * months;
+        let futureValue = presentValue * (Math.pow(interestRate, months));
         return futureValue.toFixed(2);
     }
     
     convertToCurrency(field) {
-        currencyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'});
+        let currencyFormatter = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD'});
         return currencyFormatter.format(field);
     }
 }
