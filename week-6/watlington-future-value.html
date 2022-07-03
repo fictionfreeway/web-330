@@ -19,8 +19,6 @@
             const today = document.getElementById('today');
             today.innerHTML = new Date().toLocaleDateString('en-US');
 
-            
-
             function calculate() {
                 const monthlyPayment = document.getElementById("txtMonthlyPayment").value;
                 const rate = document.getElementById("txtYearlyRate").value;
@@ -65,6 +63,8 @@
                     }
                 }
             }
+
+            document.getElementById("btnCalculate").addEventListener("click", calculate);
         </script>
     </head>
     <body>
@@ -102,7 +102,7 @@
                 </select>
             </div>
             
-            <button type="button" class="primary-button" id="btnCalculate" onclick="calculate()">Calculate</button>
+            <button type="button" class="primary-button" id="btnCalculate">Calculate</button>
             </form>
         </div>
         <a class="return-home" href="../index.html">Return Home</a>
