@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- 
+    Title: watlington-future-value.html
+    Author: William Watlington
+    Date: 7/1/2022
+    Description: HTML future-validator
+ -->
+<html>
+    <head>
+        <title>WEB 330 - Enterprise JavaScript II</title>
+        <link rel="stylesheet" href="../site.css">
+        <link rel="stylesheet" href="../theme.css">
+        <link rel="stylesheet" href="../flex-layout.css">
+        <link rel="stylesheet" href="./watlington-future-value.css">
+
+        <script type="module">
+            import {FinanceCalculator} from './finance-calculator.js';
+            import {Validator} from './validator.js';
+            const today = document.getElementById('today');
+            today.innerHTML = new Date.toLocaleDateString('en-US');
+        </script>
+    </head>
+    <body>
+        <h1 class="app-header">Welcome to the Future Value App!</h1>
+        <div class="card">
+            <h2 class="app-card-header">Future Value Calculator</h2>
+            <form>
+            <div class="row">
+                <div class="col-12" id="errorLog"></div>
+            </div>
+            <div class="row">
+                <label class="col-5">Monthly Payment:</label>
+                <input type="text" id="txtMonthlyPayment" class="col-7">
+            </div>
+            <div class="row">
+                <label class="col-5">Interest Rate</label>
+                <input type="text" id="txtYearlyRate" class="col-7">
+            </div>
+            <div class="row">
+                <i class="danger">Enter 11% as 11.1</i>
+            </div>
+            <div class="row">
+                <label class="col-5">Number of Years</label>
+                <select class="col-7 drop-down-menu" id="listNumOfYears">
+                    <option value="1">1</option>
+                    <option value="2">3</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+            
+            <button type="button" class="primary-button" id="btnCalculate">Calculate</button>
+            </form>
+        </div>
+        <a class="return-home" href="../index.html">Return Home</a>
+        <div class="card">
+            <h2 class="app-card-header">Calculation as of <span id="today"></span></h2>
+            <div class="card-content" id="futureValue"></div>
+        </div>
+    </body>
+</html>
