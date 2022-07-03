@@ -35,7 +35,7 @@ export class Validator {
     }
 
     validate() {
-        for(item of validators) {
+        for(item of this.validators) {
             if(item.validate === true) {
                 return true;
             } else {
