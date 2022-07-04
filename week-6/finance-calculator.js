@@ -13,6 +13,9 @@ export class FinanceCalculator {
         let interestRate = 1 + parseFloat(rate) / 100;
         let presentValue = parseFloat(monthlyPayment) * months;
         let futureValue = presentValue * (Math.pow(interestRate, months));
+        console.log(months);
+        console.log(interestRate);
+        console.log(presentValue);
         console.log(futureValue);
         return futureValue.toFixed(2);
     }

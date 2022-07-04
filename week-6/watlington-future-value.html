@@ -57,7 +57,7 @@
                     errorLogEl.innerHTML = "";
                     let calculator = new FinanceCalculator();
                     let futureValue = calculator.calculateFutureValue(monthlyPayment, rate, years);
-                    document.getElementById("futureValue").innerHTML = futureValue;
+                    document.getElementById("futureValue").innerHTML = `The future value is ${futureValue}`;
                 } else {
                     errorLogEl.innerHTML = "";
                     for(const message of errorLog) {
