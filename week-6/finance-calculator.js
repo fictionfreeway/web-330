@@ -9,6 +9,7 @@ export class FinanceCalculator {
     static MONTHS_IN_YEAR = 12;
 
     calculateFutureValue(monthlyPayment, rate, years) {
+        console.log(this.MONTHS_IN_YEAR);
         let months = parseFloat(years) * this.MONTHS_IN_YEAR;
         let interestRate = 1 + parseFloat(rate) / 100;
         let presentValue = parseFloat(monthlyPayment) * months;
