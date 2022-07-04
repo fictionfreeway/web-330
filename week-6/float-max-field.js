@@ -13,7 +13,7 @@ export class FloatMaxField {
     }
 
     validate() {
-        userNum = parseFloat(this.field);
+        let userNum = parseFloat(this.field);
         if(userNum < this.max) {
             return true;
         } else {

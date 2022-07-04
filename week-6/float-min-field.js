@@ -13,7 +13,7 @@ export class FloatMinField {
     }
 
     validate() {
-        userNum = parseFloat(this.field);
+        let userNum = parseFloat(this.field);
         if(userNum > this.min) {
             return true;
         } else {

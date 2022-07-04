@@ -13,7 +13,7 @@ export class FloatField {
 
     validate() {
         try {
-            userFloat = parseFloat(this.field);
+            let userFloat = parseFloat(this.field);
             if(isNaN(userFloat)) {
                 return false;
             } else {
