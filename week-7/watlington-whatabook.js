@@ -43,7 +43,8 @@ function anchorClicked(e) {
     let bookData = `<ul style="list-style-type: none">`;
 
     for (let field of data) {
-        bookData += `<li><b>${field.dataset.value}</li></b>`;
+        bookData += `<li><b>${field.dataset.value}</b>`;
+        bookData += ``
     }
 
     bookData += '</ul>'
@@ -52,7 +53,7 @@ function anchorClicked(e) {
 
 function addIsbnClickEvents() {
     let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
-    for(let i=1; i<viewButtons.length; i++) {
+    for(let i=0; i<viewButtons.length; i++) {
         viewButtons[i].addEventListener("click", anchorClicked);
     }
 }
