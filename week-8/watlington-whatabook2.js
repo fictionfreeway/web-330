@@ -5,7 +5,7 @@
 
 import { HttpClient} from "./http-client.js";
 
-http = new HttpClient;
+let http = new HttpClient;
 const isbns = [
     '0345339681',
     '0261103571',
