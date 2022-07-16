@@ -100,9 +100,3 @@ th {
 td, th {
     border: 1px solid #ddd;
 }
-
-tr:hover {
-    background-color: #d6a800;
-    color: #4f3674;
-    cursor: pointer;
-}
