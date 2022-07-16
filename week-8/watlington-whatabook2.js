@@ -25,8 +25,6 @@ const params = {
 }
 
 http.get("https://openlibrary.org/api/books", params).then(res => {
-    console.log(res);
-
     document.getElementById("bookList").innerHTML = buildHtmlString(res, "table");
 
     addIsbnClickEvents();
