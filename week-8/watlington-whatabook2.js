@@ -6,6 +6,7 @@
 import { HttpClient} from "./http-client.js";
 
 let http = new HttpClient;
+
 const isbns = [
     '0345339681',
     '0261103571',
@@ -25,6 +26,8 @@ const params = {
 }
 
 http.get("https://openlibrary.org/api/books", params).then(res => {
+    console.log(res);
+    
     document.getElementById("bookList").innerHTML = buildHtmlString(res, "table");
 
     addIsbnClickEvents();
