@@ -26,7 +26,7 @@ const params = {
 }
 
 http.get("https://openlibrary.org/api/books", params).then(res => {
-    console.log(http.res);
+    console.log(res);
 
     document.getElementById("bookList").innerHTML = buildHtmlString(res, "table");
 
@@ -58,6 +58,7 @@ function buildHtmlString(res, format) {
         ulString += "<ul style='list-style-type: none;'>";
 
         if(res.hasOwnProperty(key)) {
+            console.log('has key');
             let authors = [];
             if(res[key].details.authors) {
                 authors = res[key].details.authors.map(function(author){
