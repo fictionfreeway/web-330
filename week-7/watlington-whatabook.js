@@ -53,6 +53,6 @@ function anchorClicked(e) {
 function addIsbnClickEvents() {
     let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
     for(let i=1; i<viewButtons.length; i++) {
-        viewButtons[index].addEventListener("click", anchorClicked);
+        viewButtons[i].addEventListener("click", anchorClicked);
     }
 }
