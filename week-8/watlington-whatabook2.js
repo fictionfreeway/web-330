@@ -49,6 +49,11 @@ function getBook(e) {
     })
 }
 
+function buildHtmlString(res, format) {
+    let tableString = "<table class='table' id='bookTable'><tr><th>ISBN</th><th>Title</th><th>Description</th><th>Pages</th><th>Authors</th></tr>";
+    
+}
+
 function addIsbnClickEvents() {
     let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
     for(let i=0; i<viewButtons.length; i++) {
