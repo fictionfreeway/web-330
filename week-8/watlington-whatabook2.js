@@ -3,7 +3,7 @@
     Date: 7/16/2022
     Description: script for whataboook2 app */
 
-import { HttpClient} from "./http-client";
+import { HttpClient} from "./http-client.js";
 
 http = new HttpClient;
 const isbns = [
