@@ -82,3 +82,27 @@ button:hover {
     float: right;
 }
 
+table {
+    table-layout: fixed; 
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th {
+    padding: 12px 0;
+    text-align: left;
+    color: #fff;
+    background-color: #4f3674;
+}
+
+td, th {
+    border: 1px solid #ddd;
+}
+
+tr:hover {
+    background-color: #d6a800;
+    color: #4f3674;
+    cursor: pointer;
+}
