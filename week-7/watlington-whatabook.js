@@ -28,3 +28,7 @@ function loadBooks(xml) {
         <td data-value="Description">${description}</td><td data-value="Pages">${pages}</td><td data-value="Authors">${authors}</td></tr>`
     }
 }
+
+function addIsbnClickEvents() {
+    
+}
