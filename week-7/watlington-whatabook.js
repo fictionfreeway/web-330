@@ -43,7 +43,7 @@ function anchorClicked(e) {
     let bookData = `<ul style="list-style-type: none">`;
 
     for (let field of data) {
-        bookData += `<li><b>${field.dataset.value}`;
+        bookData += `<li><b>${field.dataset.value}</li></b>`;
     }
 
     bookData += '</ul>'
