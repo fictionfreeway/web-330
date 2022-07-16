@@ -42,7 +42,10 @@ function getBook(e) {
     let self = this;
     let isbn = self.innerText;
     http.get("https://openlibrary.org/api/books", params).then(res => {
-        
+        document.getElementById("selectedBook").innerHTML = buildHtmlString(res, "ul");
+    })
+    .catch(e => {
+        console.log(e);
     })
 }
 
