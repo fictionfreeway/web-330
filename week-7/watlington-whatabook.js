@@ -44,7 +44,7 @@ function anchorClicked(e) {
 
     for (let field of data) {
         bookData += `<li><b>${field.dataset.value}</b>`;
-        bookData += ``
+        bookData += `${field.innerHTML}`;
     }
 
     bookData += '</ul>'
