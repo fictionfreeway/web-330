@@ -17,7 +17,7 @@ fetch(filename)
 
 function loadBooks(xml) {
     let books = xml.getElementsByTagName("book");
-    let tableData = "<table class='table' id='bookTable'><tr><th>ISBN</th><th>Title</th><th>Description</th><th>Pages</th><th>Authors</th></tr><tbody>";
+    let tableData = "<table class='table' id='bookTable'><tr><th>ISBN</th><th>Title</th><th>Description</th><th>Pages</th><th>Authors</th></tr>";
     for (let book of books) {
         let isbn = book.getElementsByTagName("isbn")[0].childNodes[0].nodeValue;
         let title = book.getElementsByTagName("title")[0].childNodes[0].nodeValue;
@@ -27,7 +27,7 @@ function loadBooks(xml) {
         tableData += `<tr><td data-value="ISBN"><a href="#" class="isbn-link">${isbn}</a></td><td data-value="Title">${title}</td>
         <td data-value="Description">${description}</td><td data-value="Pages">${pages}</td><td data-value="Authors">${authors}</td></tr>`
     }
-    tableData += '</tbody></table>';
+    tableData += '</table>';
     document.getElementById("bookList").innerHTML = tableData;
 }
 
