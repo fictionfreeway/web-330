@@ -5,7 +5,7 @@
 
 import { HttpClient} from "./http-client.js";
 
-let http = new HttpClient;
+let http = new HttpClient; 
 
 const isbns = [
     '0345339681',
@@ -92,6 +92,6 @@ function buildHtmlString(res, format) {
 function addIsbnClickEvents() {
     let viewButtons = document.querySelectorAll("#bookTable tbody .isbn-link");
     for(let i=0; i<viewButtons.length; i++) {
-        viewButtons[i].addEventListener("click", anchorClicked);
+        viewButtons[i].addEventListener("click", getBook);
     }
 }
