@@ -27,6 +27,7 @@ function loadBooks(xml) {
         tableData += `<tr><td data-value="ISBN"><a href="#" class="isbn-link">${isbn}</a></td><td data-value="Title">${title}</td>
         <td data-value="Description">${description}</td><td data-value="Pages">${pages}</td><td data-value="Authors">${authors}</td></tr>`
     }
+    document.getElementById("bookList").innerHTML = tableData;
 }
 
 function addIsbnClickEvents() {
