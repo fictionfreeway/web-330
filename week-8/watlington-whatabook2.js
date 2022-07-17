@@ -42,6 +42,11 @@ function getBook(e) {
 
     let self = this;
     let isbn = self.innerText;
+    let newParams = {
+        "bibkeys": isbn,
+        "format": "json",
+        "jscmd": "details"
+    }
     http.get("https://openlibrary.org/api/books", params).then(res => {
         document.getElementById("selectedBook").innerHTML = buildHtmlString(res, "ul");
     })
@@ -60,7 +65,7 @@ function buildHtmlString(res, format) {
         if(res.hasOwnProperty(key)) {
             console.log('has key');
             let authors = [];
-            if(res[key].details.author) {
+            if(res[key].details.authors) {
                 authors = res[key].details.authors.map(function(author){
                     return author.name;
                 })
