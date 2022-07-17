@@ -73,8 +73,8 @@ function buildHtmlString(res, format) {
             let book = {
                 isbn: res[key].details.isbn_13,
                 title: res[key].details.title,
-                description: res[key].details.description,
-                pages: res[key].details.number_of_pages,
+                description: res[key].details.subtitle | res[key].details.subtitle | "N/A",
+                pages: res[key].details.number_of_pages | res[key].details.number_of_pages | "N/A",
                 authors: authors.join(',')
             }
 
