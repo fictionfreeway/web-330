@@ -60,7 +60,7 @@ function buildHtmlString(res, format) {
         if(res.hasOwnProperty(key)) {
             console.log('has key');
             let authors = [];
-            if(res[key].details.authors) {
+            if(res[key].details.author) {
                 authors = res[key].details.authors.map(function(author){
                     return author.name;
                 })
