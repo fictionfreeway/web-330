@@ -63,9 +63,8 @@ function buildHtmlString(res, format) {
         ulString += "<ul style='list-style-type: none;'>";
 
         if(res.hasOwnProperty(key)) {
-            console.log('has key');
             let authors = [];
-            if(res[key].details.authors) {
+            if(res[key].details.authors != undefined) {
                 authors = res[key].details.authors.map(function(author){
                     return author.name;
                 })
