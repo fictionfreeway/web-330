@@ -41,7 +41,7 @@ function getBook(e) {
     e.preventDefault();
 
     let self = this;
-    let isbn = self.innerText;
+    let isbn = [self.innerText];
     let newParams = {
         "bibkeys": isbn,
         "format": "json",
