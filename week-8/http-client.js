@@ -1,7 +1,7 @@
 /*  Title: http-client.js
     Author: William Watlington
     Date: 7/16/2022
-    Description: httpClient class for whataboook2 app */
+    Description: httpClient class for whatabook2 app */
 
 export class HttpClient {
     async get(url, params="") {
@@ -10,6 +10,6 @@ export class HttpClient {
         const res = await fetch(url.toString(), {
             method: "GET"
         })
-        return JSON.stringify(res);
+        return res;
     }
 }

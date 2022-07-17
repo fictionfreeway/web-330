@@ -1,7 +1,7 @@
 /*  Title: watlington-whatabook2.js
     Author: William Watlington
     Date: 7/16/2022
-    Description: script for whataboook2 app */
+    Description: script for whatabook2 app */
 
 import { HttpClient} from "./http-client.js";
 
@@ -64,7 +64,7 @@ function buildHtmlString(res, format) {
 
         if(res.hasOwnProperty(key)) {
             let authors = [];
-            if(res[key].details.authors != undefined) {
+            if(res[key].details.authors) {
                 authors = res[key].details.authors.map(function(author){
                     return author.name;
                 })
