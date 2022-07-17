@@ -10,6 +10,6 @@ export class HttpClient {
         const res = await fetch(url.toString(), {
             method: "GET"
         })
-        return res;
+        return res.json();
     }
 }
